@@ -1,0 +1,1013 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C8F6F24B5E76FFBA4091056 /* Pods_BackToLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C49E496A6BDC6F8BAF65D77 /* Pods_BackToLife.framework */; };
+		7203B07229E8D287005943BD /* TherapyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203B07129E8D287005943BD /* TherapyService.swift */; };
+		723B2A4E2A07E8670094679D /* AuthentificationB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723B2A4D2A07E8670094679D /* AuthentificationB.swift */; };
+		72404F5C29DE268A00245477 /* mapimplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72404F5B29DE268A00245477 /* mapimplementation.swift */; };
+		72404F5E29DE42BE00245477 /* DoctorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72404F5D29DE42BE00245477 /* DoctorProfile.swift */; };
+		72404F6029DE458100245477 /* PatientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72404F5F29DE458100245477 /* PatientListView.swift */; };
+		72404F6229DE51BA00245477 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72404F6129DE51BA00245477 /* LoginView.swift */; };
+		72404F6729DE558700245477 /* patientHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72404F6629DE558700245477 /* patientHomeView.swift */; };
+		72440F4C29EA1F9000487162 /* SendEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72440F4B29EA1F9000487162 /* SendEmail.swift */; };
+		72440F4E29EA212C00487162 /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72440F4D29EA212C00487162 /* ForgetPassword.swift */; };
+		72440F5129EA453300487162 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72440F5029EA453300487162 /* Background.swift */; };
+		724E899B29F89E940046F53F /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724E899A29F89E940046F53F /* Map.swift */; };
+		7293C50229E4C80B0092B3A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7293C50129E4C80B0092B3A1 /* User.swift */; };
+		7293C50529E4CFFB0092B3A1 /* AuthetificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7293C50429E4CFFB0092B3A1 /* AuthetificationService.swift */; };
+		7293C50729E4D25F0092B3A1 /* RegisterViewModel..swift in Sources */ = {isa = PBXBuildFile; fileRef = 7293C50629E4D25F0092B3A1 /* RegisterViewModel..swift */; };
+		729D91D429F9658600CBC874 /* TherapyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D91D329F9658600CBC874 /* TherapyViewModel.swift */; };
+		729D91D629F9733C00CBC874 /* ListTherapyPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D91D529F9733C00CBC874 /* ListTherapyPatient.swift */; };
+		729D91D829F974DA00CBC874 /* TherapyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D91D729F974DA00CBC874 /* TherapyDetailView.swift */; };
+		729D91DA29F97F1F00CBC874 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D91D929F97F1F00CBC874 /* Reservation.swift */; };
+		72A44D0329FE8F70007043CF /* loginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A44D0229FE8F70007043CF /* loginViewModel.swift */; };
+		72A44D0529FE9E09007043CF /* UpdateTherapy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A44D0429FE9E09007043CF /* UpdateTherapy.swift */; };
+		72A44D0729FEE858007043CF /* ReservationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A44D0629FEE858007043CF /* ReservationViewModel.swift */; };
+		72A44D0929FF0A56007043CF /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A44D0829FF0A56007043CF /* Article.swift */; };
+		72AB059F2A0173D700879E8D /* AddReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AB059E2A0173D700879E8D /* AddReport.swift */; };
+		72AB05A12A01740200879E8D /* AddMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AB05A02A01740200879E8D /* AddMood.swift */; };
+		72AB05A42A01777300879E8D /* Breathing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AB05A32A01777300879E8D /* Breathing.swift */; };
+		72AB05A62A0179E800879E8D /* emptyy1.json in Resources */ = {isa = PBXBuildFile; fileRef = 72AB05A52A0179E800879E8D /* emptyy1.json */; };
+		72AFFD1E29E60686004023D7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AFFD1D29E60686004023D7 /* HomeView.swift */; };
+		72BB08462A012B11008B8B20 /* PatientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB08452A012B11008B8B20 /* PatientProfile.swift */; };
+		72BB08482A012D6D008B8B20 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB08472A012D6D008B8B20 /* ProfileViewModel.swift */; };
+		72BB084A2A0159E8008B8B20 /* MoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB08492A0159E8008B8B20 /* MoodService.swift */; };
+		72BB084C2A0159FC008B8B20 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB084B2A0159FC008B8B20 /* Report.swift */; };
+		72BB084E2A015A18008B8B20 /* BreatheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB084D2A015A18008B8B20 /* BreatheType.swift */; };
+		72BB08522A015A9D008B8B20 /* FetchReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB08512A015A9D008B8B20 /* FetchReport.swift */; };
+		72BB08542A015B65008B8B20 /* MoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB08532A015B65008B8B20 /* MoodViewModel.swift */; };
+		72BB08572A016748008B8B20 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 72BB08562A016748008B8B20 /* Lottie */; };
+		72BB085A2A016EB5008B8B20 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 72BB08592A016EB5008B8B20 /* SwiftUIX */; };
+		72BE92F62A095B0800F88604 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE92F52A095B0800F88604 /* SplashScreenViewController.swift */; };
+		72BE92FC2A095C0B00F88604 /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE92FB2A095C0B00F88604 /* Meditation.swift */; };
+		72BE92FE2A095C4100F88604 /* YTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE92FD2A095C4100F88604 /* YTView.swift */; };
+		72BE93002A095E9800F88604 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72BE92FF2A095E9800F88604 /* background_music.mp3 */; };
+		72C0A04729DE1AD700F89497 /* BackToLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A04629DE1AD700F89497 /* BackToLifeApp.swift */; };
+		72C0A04929DE1AD700F89497 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A04829DE1AD700F89497 /* ContentView.swift */; };
+		72C0A04B29DE1AD800F89497 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C0A04A29DE1AD800F89497 /* Assets.xcassets */; };
+		72C0A04E29DE1AD800F89497 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C0A04D29DE1AD800F89497 /* Preview Assets.xcassets */; };
+		72C0A05029DE1AD800F89497 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A04F29DE1AD800F89497 /* Persistence.swift */; };
+		72C0A05329DE1AD800F89497 /* BackToLife.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A05129DE1AD800F89497 /* BackToLife.xcdatamodeld */; };
+		72C0A05D29DE1AD800F89497 /* BackToLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A05C29DE1AD800F89497 /* BackToLifeTests.swift */; };
+		72C0A06729DE1AD800F89497 /* BackToLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A06629DE1AD800F89497 /* BackToLifeUITests.swift */; };
+		72C0A06929DE1AD800F89497 /* BackToLifeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A06829DE1AD800F89497 /* BackToLifeUITestsLaunchTests.swift */; };
+		72C0A07729DE1B9700F89497 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A07629DE1B9700F89497 /* RegisterView.swift */; };
+		72C0A07929DE1C1200F89497 /* AjoutTherapy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A07829DE1C1200F89497 /* AjoutTherapy.swift */; };
+		72C0A07B29DE1C4500F89497 /* ListTherapiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A07A29DE1C4500F89497 /* ListTherapiesView.swift */; };
+		72C0A07E29DE1D1800F89497 /* Therapy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A07D29DE1D1800F89497 /* Therapy.swift */; };
+		72D4981329F733E0002CA55A /* CaptionedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4981229F733E0002CA55A /* CaptionedTextField.swift */; };
+		72D4981529F7342B002CA55A /* viewableSecure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4981429F7342B002CA55A /* viewableSecure.swift */; };
+		AB309AE0DBB07A9DE2C75217 /* Pods_BackToLifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF52D785868289716453B67E /* Pods_BackToLifeTests.framework */; };
+		BE05A44546F7AE4920CB57BC /* Pods_BackToLife_BackToLifeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C5C303EC6A034FCDFDF77DF /* Pods_BackToLife_BackToLifeUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72C0A05929DE1AD800F89497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72C0A03B29DE1AD700F89497 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72C0A04229DE1AD700F89497;
+			remoteInfo = BackToLife;
+		};
+		72C0A06329DE1AD800F89497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72C0A03B29DE1AD700F89497 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72C0A04229DE1AD700F89497;
+			remoteInfo = BackToLife;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		480D405F9A45012A89B8B4BC /* Pods-BackToLifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackToLifeTests.debug.xcconfig"; path = "Target Support Files/Pods-BackToLifeTests/Pods-BackToLifeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C5C303EC6A034FCDFDF77DF /* Pods_BackToLife_BackToLifeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackToLife_BackToLifeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7203B07129E8D287005943BD /* TherapyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyService.swift; sourceTree = "<group>"; };
+		723B2A4D2A07E8670094679D /* AuthentificationB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationB.swift; sourceTree = "<group>"; };
+		72404F5B29DE268A00245477 /* mapimplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapimplementation.swift; sourceTree = "<group>"; };
+		72404F5D29DE42BE00245477 /* DoctorProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfile.swift; sourceTree = "<group>"; };
+		72404F5F29DE458100245477 /* PatientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientListView.swift; sourceTree = "<group>"; };
+		72404F6129DE51BA00245477 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		72404F6629DE558700245477 /* patientHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientHomeView.swift; sourceTree = "<group>"; };
+		72440F4B29EA1F9000487162 /* SendEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmail.swift; sourceTree = "<group>"; };
+		72440F4D29EA212C00487162 /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
+		72440F5029EA453300487162 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		724E899A29F89E940046F53F /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		7293C50129E4C80B0092B3A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7293C50429E4CFFB0092B3A1 /* AuthetificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthetificationService.swift; sourceTree = "<group>"; };
+		7293C50629E4D25F0092B3A1 /* RegisterViewModel..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel..swift; sourceTree = "<group>"; };
+		729D91D329F9658600CBC874 /* TherapyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyViewModel.swift; sourceTree = "<group>"; };
+		729D91D529F9733C00CBC874 /* ListTherapyPatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTherapyPatient.swift; sourceTree = "<group>"; };
+		729D91D729F974DA00CBC874 /* TherapyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyDetailView.swift; sourceTree = "<group>"; };
+		729D91D929F97F1F00CBC874 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		72A44D0229FE8F70007043CF /* loginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewModel.swift; sourceTree = "<group>"; };
+		72A44D0429FE9E09007043CF /* UpdateTherapy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTherapy.swift; sourceTree = "<group>"; };
+		72A44D0629FEE858007043CF /* ReservationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewModel.swift; sourceTree = "<group>"; };
+		72A44D0829FF0A56007043CF /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		72AB059E2A0173D700879E8D /* AddReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReport.swift; sourceTree = "<group>"; };
+		72AB05A02A01740200879E8D /* AddMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMood.swift; sourceTree = "<group>"; };
+		72AB05A32A01777300879E8D /* Breathing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breathing.swift; sourceTree = "<group>"; };
+		72AB05A52A0179E800879E8D /* emptyy1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emptyy1.json; path = ../attachments/emptyy1.json; sourceTree = "<group>"; };
+		72AFFD1D29E60686004023D7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		72BB08452A012B11008B8B20 /* PatientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProfile.swift; sourceTree = "<group>"; };
+		72BB08472A012D6D008B8B20 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		72BB08492A0159E8008B8B20 /* MoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodService.swift; sourceTree = "<group>"; };
+		72BB084B2A0159FC008B8B20 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		72BB084D2A015A18008B8B20 /* BreatheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheType.swift; sourceTree = "<group>"; };
+		72BB08512A015A9D008B8B20 /* FetchReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchReport.swift; sourceTree = "<group>"; };
+		72BB08532A015B65008B8B20 /* MoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewModel.swift; sourceTree = "<group>"; };
+		72BE92F52A095B0800F88604 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		72BE92FB2A095C0B00F88604 /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		72BE92FD2A095C4100F88604 /* YTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTView.swift; sourceTree = "<group>"; };
+		72BE92FF2A095E9800F88604 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background_music.mp3; path = ../../Downloads/background_music.mp3; sourceTree = "<group>"; };
+		72C0A04329DE1AD700F89497 /* BackToLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackToLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C0A04629DE1AD700F89497 /* BackToLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToLifeApp.swift; sourceTree = "<group>"; };
+		72C0A04829DE1AD700F89497 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		72C0A04A29DE1AD800F89497 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72C0A04D29DE1AD800F89497 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72C0A04F29DE1AD800F89497 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		72C0A05229DE1AD800F89497 /* BackToLife.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BackToLife.xcdatamodel; sourceTree = "<group>"; };
+		72C0A05829DE1AD800F89497 /* BackToLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackToLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C0A05C29DE1AD800F89497 /* BackToLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToLifeTests.swift; sourceTree = "<group>"; };
+		72C0A06229DE1AD800F89497 /* BackToLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackToLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C0A06629DE1AD800F89497 /* BackToLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToLifeUITests.swift; sourceTree = "<group>"; };
+		72C0A06829DE1AD800F89497 /* BackToLifeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToLifeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		72C0A07629DE1B9700F89497 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		72C0A07829DE1C1200F89497 /* AjoutTherapy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutTherapy.swift; sourceTree = "<group>"; };
+		72C0A07A29DE1C4500F89497 /* ListTherapiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTherapiesView.swift; sourceTree = "<group>"; };
+		72C0A07D29DE1D1800F89497 /* Therapy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Therapy.swift; sourceTree = "<group>"; };
+		72D4981229F733E0002CA55A /* CaptionedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionedTextField.swift; sourceTree = "<group>"; };
+		72D4981429F7342B002CA55A /* viewableSecure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewableSecure.swift; sourceTree = "<group>"; };
+		7C49E496A6BDC6F8BAF65D77 /* Pods_BackToLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackToLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		802D855DBE04B75A0A2A9ED7 /* Pods-BackToLifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackToLifeTests.release.xcconfig"; path = "Target Support Files/Pods-BackToLifeTests/Pods-BackToLifeTests.release.xcconfig"; sourceTree = "<group>"; };
+		8765032A674C97090CA7A950 /* Pods-BackToLife-BackToLifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackToLife-BackToLifeUITests.release.xcconfig"; path = "Target Support Files/Pods-BackToLife-BackToLifeUITests/Pods-BackToLife-BackToLifeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		91DB99315DCE7C342027D287 /* Pods-BackToLife-BackToLifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackToLife-BackToLifeUITests.debug.xcconfig"; path = "Target Support Files/Pods-BackToLife-BackToLifeUITests/Pods-BackToLife-BackToLifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA5D863CBFBEBFE4E7842AB0 /* Pods-BackToLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackToLife.release.xcconfig"; path = "Target Support Files/Pods-BackToLife/Pods-BackToLife.release.xcconfig"; sourceTree = "<group>"; };
+		BDD9BA26D669489AC5F55B29 /* Pods-BackToLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackToLife.debug.xcconfig"; path = "Target Support Files/Pods-BackToLife/Pods-BackToLife.debug.xcconfig"; sourceTree = "<group>"; };
+		EF52D785868289716453B67E /* Pods_BackToLifeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackToLifeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72C0A04029DE1AD700F89497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72BB085A2A016EB5008B8B20 /* SwiftUIX in Frameworks */,
+				6C8F6F24B5E76FFBA4091056 /* Pods_BackToLife.framework in Frameworks */,
+				72BB08572A016748008B8B20 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72C0A05529DE1AD800F89497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB309AE0DBB07A9DE2C75217 /* Pods_BackToLifeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72C0A05F29DE1AD800F89497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE05A44546F7AE4920CB57BC /* Pods_BackToLife_BackToLifeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72404F6329DE522900245477 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7293C50629E4D25F0092B3A1 /* RegisterViewModel..swift */,
+				729D91D329F9658600CBC874 /* TherapyViewModel.swift */,
+				72A44D0229FE8F70007043CF /* loginViewModel.swift */,
+				72A44D0629FEE858007043CF /* ReservationViewModel.swift */,
+				72BB08472A012D6D008B8B20 /* ProfileViewModel.swift */,
+				72BB08532A015B65008B8B20 /* MoodViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		72440F4F29EA451D00487162 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				72440F5029EA453300487162 /* Background.swift */,
+				72D4981229F733E0002CA55A /* CaptionedTextField.swift */,
+				72D4981429F7342B002CA55A /* viewableSecure.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7293C50329E4CFE40092B3A1 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				7293C50429E4CFFB0092B3A1 /* AuthetificationService.swift */,
+				7203B07129E8D287005943BD /* TherapyService.swift */,
+				72BB08492A0159E8008B8B20 /* MoodService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		72AB059B2A01731E00879E8D /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				72BB08512A015A9D008B8B20 /* FetchReport.swift */,
+				72AB059E2A0173D700879E8D /* AddReport.swift */,
+				72AB05A02A01740200879E8D /* AddMood.swift */,
+				723B2A4D2A07E8670094679D /* AuthentificationB.swift */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		72AB05A22A01776500879E8D /* Breathing */ = {
+			isa = PBXGroup;
+			children = (
+				72AB05A32A01777300879E8D /* Breathing.swift */,
+			);
+			path = Breathing;
+			sourceTree = "<group>";
+		};
+		72BE92F42A095AF800F88604 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				72BE92F52A095B0800F88604 /* SplashScreenViewController.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		72BE92F82A095B9E00F88604 /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				72BE92FB2A095C0B00F88604 /* Meditation.swift */,
+				72BE92FD2A095C4100F88604 /* YTView.swift */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
+		72C0A03A29DE1AD700F89497 = {
+			isa = PBXGroup;
+			children = (
+				72BE92FF2A095E9800F88604 /* background_music.mp3 */,
+				72AB05A52A0179E800879E8D /* emptyy1.json */,
+				72C0A04529DE1AD700F89497 /* BackToLife */,
+				72C0A05B29DE1AD800F89497 /* BackToLifeTests */,
+				72C0A06529DE1AD800F89497 /* BackToLifeUITests */,
+				72C0A04429DE1AD700F89497 /* Products */,
+				E55018DC6EABFF5CAB5C0C55 /* Pods */,
+				9B698B714BD8B361BD348EC9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		72C0A04429DE1AD700F89497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72C0A04329DE1AD700F89497 /* BackToLife.app */,
+				72C0A05829DE1AD800F89497 /* BackToLifeTests.xctest */,
+				72C0A06229DE1AD800F89497 /* BackToLifeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72C0A04529DE1AD700F89497 /* BackToLife */ = {
+			isa = PBXGroup;
+			children = (
+				72440F4F29EA451D00487162 /* Utils */,
+				7293C50329E4CFE40092B3A1 /* services */,
+				72404F6329DE522900245477 /* ViewModels */,
+				72C0A07C29DE1D0500F89497 /* Models */,
+				72C0A07529DE1B4A00F89497 /* screens */,
+				72C0A04629DE1AD700F89497 /* BackToLifeApp.swift */,
+				72C0A04829DE1AD700F89497 /* ContentView.swift */,
+				72440F4D29EA212C00487162 /* ForgetPassword.swift */,
+				72C0A04F29DE1AD800F89497 /* Persistence.swift */,
+				72C0A05129DE1AD800F89497 /* BackToLife.xcdatamodeld */,
+				72C0A04C29DE1AD800F89497 /* Preview Content */,
+			);
+			path = BackToLife;
+			sourceTree = "<group>";
+		};
+		72C0A04C29DE1AD800F89497 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				72C0A04D29DE1AD800F89497 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		72C0A05B29DE1AD800F89497 /* BackToLifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				72C0A05C29DE1AD800F89497 /* BackToLifeTests.swift */,
+			);
+			path = BackToLifeTests;
+			sourceTree = "<group>";
+		};
+		72C0A06529DE1AD800F89497 /* BackToLifeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				72C0A06629DE1AD800F89497 /* BackToLifeUITests.swift */,
+				72C0A06829DE1AD800F89497 /* BackToLifeUITestsLaunchTests.swift */,
+			);
+			path = BackToLifeUITests;
+			sourceTree = "<group>";
+		};
+		72C0A07529DE1B4A00F89497 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				72BE92F82A095B9E00F88604 /* Meditation */,
+				72BE92F42A095AF800F88604 /* SplashScreen */,
+				72AB05A22A01776500879E8D /* Breathing */,
+				72AB059B2A01731E00879E8D /* Reports */,
+				72C0A07629DE1B9700F89497 /* RegisterView.swift */,
+				72C0A07829DE1C1200F89497 /* AjoutTherapy.swift */,
+				72C0A07A29DE1C4500F89497 /* ListTherapiesView.swift */,
+				72404F5B29DE268A00245477 /* mapimplementation.swift */,
+				72404F5D29DE42BE00245477 /* DoctorProfile.swift */,
+				72404F5F29DE458100245477 /* PatientListView.swift */,
+				72404F6129DE51BA00245477 /* LoginView.swift */,
+				72404F6629DE558700245477 /* patientHomeView.swift */,
+				72AFFD1D29E60686004023D7 /* HomeView.swift */,
+				72440F4B29EA1F9000487162 /* SendEmail.swift */,
+				729D91D529F9733C00CBC874 /* ListTherapyPatient.swift */,
+				729D91D729F974DA00CBC874 /* TherapyDetailView.swift */,
+				724E899A29F89E940046F53F /* Map.swift */,
+				72C0A04A29DE1AD800F89497 /* Assets.xcassets */,
+				72A44D0429FE9E09007043CF /* UpdateTherapy.swift */,
+				72A44D0829FF0A56007043CF /* Article.swift */,
+				72BB08452A012B11008B8B20 /* PatientProfile.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		72C0A07C29DE1D0500F89497 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72C0A07D29DE1D1800F89497 /* Therapy.swift */,
+				7293C50129E4C80B0092B3A1 /* User.swift */,
+				729D91D929F97F1F00CBC874 /* Reservation.swift */,
+				72BB084B2A0159FC008B8B20 /* Report.swift */,
+				72BB084D2A015A18008B8B20 /* BreatheType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B698B714BD8B361BD348EC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C49E496A6BDC6F8BAF65D77 /* Pods_BackToLife.framework */,
+				6C5C303EC6A034FCDFDF77DF /* Pods_BackToLife_BackToLifeUITests.framework */,
+				EF52D785868289716453B67E /* Pods_BackToLifeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E55018DC6EABFF5CAB5C0C55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDD9BA26D669489AC5F55B29 /* Pods-BackToLife.debug.xcconfig */,
+				BA5D863CBFBEBFE4E7842AB0 /* Pods-BackToLife.release.xcconfig */,
+				91DB99315DCE7C342027D287 /* Pods-BackToLife-BackToLifeUITests.debug.xcconfig */,
+				8765032A674C97090CA7A950 /* Pods-BackToLife-BackToLifeUITests.release.xcconfig */,
+				480D405F9A45012A89B8B4BC /* Pods-BackToLifeTests.debug.xcconfig */,
+				802D855DBE04B75A0A2A9ED7 /* Pods-BackToLifeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72C0A04229DE1AD700F89497 /* BackToLife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72C0A06C29DE1AD800F89497 /* Build configuration list for PBXNativeTarget "BackToLife" */;
+			buildPhases = (
+				BD6C57426518F8224644E156 /* [CP] Check Pods Manifest.lock */,
+				72C0A03F29DE1AD700F89497 /* Sources */,
+				72C0A04029DE1AD700F89497 /* Frameworks */,
+				72C0A04129DE1AD700F89497 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BackToLife;
+			packageProductDependencies = (
+				72BB08562A016748008B8B20 /* Lottie */,
+				72BB08592A016EB5008B8B20 /* SwiftUIX */,
+			);
+			productName = BackToLife;
+			productReference = 72C0A04329DE1AD700F89497 /* BackToLife.app */;
+			productType = "com.apple.product-type.application";
+		};
+		72C0A05729DE1AD800F89497 /* BackToLifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72C0A06F29DE1AD800F89497 /* Build configuration list for PBXNativeTarget "BackToLifeTests" */;
+			buildPhases = (
+				E967106D09640C3C7BD733F1 /* [CP] Check Pods Manifest.lock */,
+				72C0A05429DE1AD800F89497 /* Sources */,
+				72C0A05529DE1AD800F89497 /* Frameworks */,
+				72C0A05629DE1AD800F89497 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72C0A05A29DE1AD800F89497 /* PBXTargetDependency */,
+			);
+			name = BackToLifeTests;
+			productName = BackToLifeTests;
+			productReference = 72C0A05829DE1AD800F89497 /* BackToLifeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		72C0A06129DE1AD800F89497 /* BackToLifeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72C0A07229DE1AD800F89497 /* Build configuration list for PBXNativeTarget "BackToLifeUITests" */;
+			buildPhases = (
+				6C4880CEA7129DFAE01A53CF /* [CP] Check Pods Manifest.lock */,
+				72C0A05E29DE1AD800F89497 /* Sources */,
+				72C0A05F29DE1AD800F89497 /* Frameworks */,
+				72C0A06029DE1AD800F89497 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72C0A06429DE1AD800F89497 /* PBXTargetDependency */,
+			);
+			name = BackToLifeUITests;
+			productName = BackToLifeUITests;
+			productReference = 72C0A06229DE1AD800F89497 /* BackToLifeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72C0A03B29DE1AD700F89497 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					72C0A04229DE1AD700F89497 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					72C0A05729DE1AD800F89497 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 72C0A04229DE1AD700F89497;
+					};
+					72C0A06129DE1AD800F89497 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 72C0A04229DE1AD700F89497;
+					};
+				};
+			};
+			buildConfigurationList = 72C0A03E29DE1AD700F89497 /* Build configuration list for PBXProject "BackToLife" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72C0A03A29DE1AD700F89497;
+			packageReferences = (
+				72BB08552A016748008B8B20 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				72BB08582A016EB5008B8B20 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
+			productRefGroup = 72C0A04429DE1AD700F89497 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72C0A04229DE1AD700F89497 /* BackToLife */,
+				72C0A05729DE1AD800F89497 /* BackToLifeTests */,
+				72C0A06129DE1AD800F89497 /* BackToLifeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72C0A04129DE1AD700F89497 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C0A04E29DE1AD800F89497 /* Preview Assets.xcassets in Resources */,
+				72AB05A62A0179E800879E8D /* emptyy1.json in Resources */,
+				72BE93002A095E9800F88604 /* background_music.mp3 in Resources */,
+				72C0A04B29DE1AD800F89497 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72C0A05629DE1AD800F89497 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72C0A06029DE1AD800F89497 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C4880CEA7129DFAE01A53CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BackToLife-BackToLifeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD6C57426518F8224644E156 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BackToLife-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E967106D09640C3C7BD733F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BackToLifeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72C0A03F29DE1AD700F89497 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72440F4C29EA1F9000487162 /* SendEmail.swift in Sources */,
+				7293C50729E4D25F0092B3A1 /* RegisterViewModel..swift in Sources */,
+				72C0A05029DE1AD800F89497 /* Persistence.swift in Sources */,
+				72A44D0729FEE858007043CF /* ReservationViewModel.swift in Sources */,
+				72404F5C29DE268A00245477 /* mapimplementation.swift in Sources */,
+				729D91D629F9733C00CBC874 /* ListTherapyPatient.swift in Sources */,
+				72C0A07B29DE1C4500F89497 /* ListTherapiesView.swift in Sources */,
+				72AB059F2A0173D700879E8D /* AddReport.swift in Sources */,
+				72BB084A2A0159E8008B8B20 /* MoodService.swift in Sources */,
+				72404F6729DE558700245477 /* patientHomeView.swift in Sources */,
+				72A44D0329FE8F70007043CF /* loginViewModel.swift in Sources */,
+				72404F6029DE458100245477 /* PatientListView.swift in Sources */,
+				72A44D0929FF0A56007043CF /* Article.swift in Sources */,
+				72C0A04929DE1AD700F89497 /* ContentView.swift in Sources */,
+				723B2A4E2A07E8670094679D /* AuthentificationB.swift in Sources */,
+				72404F5E29DE42BE00245477 /* DoctorProfile.swift in Sources */,
+				72AFFD1E29E60686004023D7 /* HomeView.swift in Sources */,
+				72A44D0529FE9E09007043CF /* UpdateTherapy.swift in Sources */,
+				72BB08542A015B65008B8B20 /* MoodViewModel.swift in Sources */,
+				72440F5129EA453300487162 /* Background.swift in Sources */,
+				72440F4E29EA212C00487162 /* ForgetPassword.swift in Sources */,
+				7293C50229E4C80B0092B3A1 /* User.swift in Sources */,
+				7293C50529E4CFFB0092B3A1 /* AuthetificationService.swift in Sources */,
+				72C0A04729DE1AD700F89497 /* BackToLifeApp.swift in Sources */,
+				72BB084C2A0159FC008B8B20 /* Report.swift in Sources */,
+				72404F6229DE51BA00245477 /* LoginView.swift in Sources */,
+				72C0A07929DE1C1200F89497 /* AjoutTherapy.swift in Sources */,
+				72AB05A42A01777300879E8D /* Breathing.swift in Sources */,
+				72C0A07E29DE1D1800F89497 /* Therapy.swift in Sources */,
+				72C0A05329DE1AD800F89497 /* BackToLife.xcdatamodeld in Sources */,
+				72BE92FC2A095C0B00F88604 /* Meditation.swift in Sources */,
+				72BB08522A015A9D008B8B20 /* FetchReport.swift in Sources */,
+				729D91D829F974DA00CBC874 /* TherapyDetailView.swift in Sources */,
+				729D91D429F9658600CBC874 /* TherapyViewModel.swift in Sources */,
+				729D91DA29F97F1F00CBC874 /* Reservation.swift in Sources */,
+				724E899B29F89E940046F53F /* Map.swift in Sources */,
+				72BB08462A012B11008B8B20 /* PatientProfile.swift in Sources */,
+				7203B07229E8D287005943BD /* TherapyService.swift in Sources */,
+				72AB05A12A01740200879E8D /* AddMood.swift in Sources */,
+				72BE92F62A095B0800F88604 /* SplashScreenViewController.swift in Sources */,
+				72BB084E2A015A18008B8B20 /* BreatheType.swift in Sources */,
+				72D4981529F7342B002CA55A /* viewableSecure.swift in Sources */,
+				72C0A07729DE1B9700F89497 /* RegisterView.swift in Sources */,
+				72D4981329F733E0002CA55A /* CaptionedTextField.swift in Sources */,
+				72BB08482A012D6D008B8B20 /* ProfileViewModel.swift in Sources */,
+				72BE92FE2A095C4100F88604 /* YTView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72C0A05429DE1AD800F89497 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C0A05D29DE1AD800F89497 /* BackToLifeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72C0A05E29DE1AD800F89497 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C0A06929DE1AD800F89497 /* BackToLifeUITestsLaunchTests.swift in Sources */,
+				72C0A06729DE1AD800F89497 /* BackToLifeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72C0A05A29DE1AD800F89497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72C0A04229DE1AD700F89497 /* BackToLife */;
+			targetProxy = 72C0A05929DE1AD800F89497 /* PBXContainerItemProxy */;
+		};
+		72C0A06429DE1AD800F89497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72C0A04229DE1AD700F89497 /* BackToLife */;
+			targetProxy = 72C0A06329DE1AD800F89497 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		72C0A06A29DE1AD800F89497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		72C0A06B29DE1AD800F89497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72C0A06D29DE1AD800F89497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD9BA26D669489AC5F55B29 /* Pods-BackToLife.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BackToLife/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.BackToLife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72C0A06E29DE1AD800F89497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA5D863CBFBEBFE4E7842AB0 /* Pods-BackToLife.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BackToLife/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.BackToLife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		72C0A07029DE1AD800F89497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 480D405F9A45012A89B8B4BC /* Pods-BackToLifeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.BackToLifeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackToLife.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BackToLife";
+			};
+			name = Debug;
+		};
+		72C0A07129DE1AD800F89497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 802D855DBE04B75A0A2A9ED7 /* Pods-BackToLifeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.BackToLifeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackToLife.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BackToLife";
+			};
+			name = Release;
+		};
+		72C0A07329DE1AD800F89497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91DB99315DCE7C342027D287 /* Pods-BackToLife-BackToLifeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.BackToLifeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BackToLife;
+			};
+			name = Debug;
+		};
+		72C0A07429DE1AD800F89497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8765032A674C97090CA7A950 /* Pods-BackToLife-BackToLifeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.BackToLifeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BackToLife;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72C0A03E29DE1AD700F89497 /* Build configuration list for PBXProject "BackToLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72C0A06A29DE1AD800F89497 /* Debug */,
+				72C0A06B29DE1AD800F89497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72C0A06C29DE1AD800F89497 /* Build configuration list for PBXNativeTarget "BackToLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72C0A06D29DE1AD800F89497 /* Debug */,
+				72C0A06E29DE1AD800F89497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72C0A06F29DE1AD800F89497 /* Build configuration list for PBXNativeTarget "BackToLifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72C0A07029DE1AD800F89497 /* Debug */,
+				72C0A07129DE1AD800F89497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72C0A07229DE1AD800F89497 /* Build configuration list for PBXNativeTarget "BackToLifeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72C0A07329DE1AD800F89497 /* Debug */,
+				72C0A07429DE1AD800F89497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72BB08552A016748008B8B20 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		72BB08582A016EB5008B8B20 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72BB08562A016748008B8B20 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72BB08552A016748008B8B20 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		72BB08592A016EB5008B8B20 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72BB08582A016EB5008B8B20 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		72C0A05129DE1AD800F89497 /* BackToLife.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				72C0A05229DE1AD800F89497 /* BackToLife.xcdatamodel */,
+			);
+			currentVersion = 72C0A05229DE1AD800F89497 /* BackToLife.xcdatamodel */;
+			path = BackToLife.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 72C0A03B29DE1AD700F89497 /* Project object */;
+}
