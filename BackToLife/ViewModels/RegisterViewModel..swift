@@ -10,6 +10,8 @@ extension register {
         @Published var firstName: String = ""
         @Published var nickName: String = ""
         @Published var phone: String = ""
+        @Published var image: UIImage?
+
         @Published var role: String = "patient"
         @Published var address: String = ""
         @Published var authSuccessful: Bool = true
@@ -56,22 +58,25 @@ extension register {
                     return
                 }
                 
-                let tokenRes = try await AuthenticationService()._Register(email, password, firstName, nickName, phone, address, role) { (resp) in
+                let tokenRes = try await AuthenticationService()._Register(email, password, firstName, nickName, phone, address, role,image!) { (resp) in
                     
-                    if(resp == true){
+                    if(resp == "false"){
                         
-                        print("success signUp")
-                        authSuccessful = true
+                        print("error signUp")
+
 
                         
                     } else {
-                        print("error signUp")
+                        print("success signUp")
+                        self.authSuccessful = true
+                        userData.token = resp
+                        print(resp)
+
+
                     }
                     
                 }
                 
-                userData.token = tokenRes
-                print(tokenRes)
                 
             } catch let error {
                 if type(of: error) == AuthenticationService.AuthenticationError.self {

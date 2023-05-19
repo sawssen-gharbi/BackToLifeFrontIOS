@@ -23,8 +23,8 @@ struct profileView1: View {
     @State var address: String = ""
   
     @State private var navigateToLogin = false
+    @State private var url_image=UserDefaults.standard.string(forKey: "imago") ?? "nil"
 
-    
     
     //image
     @State var shouldShowImagePicker = false
@@ -38,54 +38,85 @@ struct profileView1: View {
             Form{
                 
                 //Image
-                HStack{
-                    if let image = self.image {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 143,height: 143)
-                            .cornerRadius(80)
-                    }else{
-                        
-                        Image("register")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150)
-                            .clipShape(Circle())
-                            .shadow(radius: 10)
-                        
-                    }
-                    
-                }
-                .overlay(RoundedRectangle(cornerRadius: 80)
-                    .stroke(Color("DarkPink"), lineWidth : 3)
-                )
-                .onTapGesture {
-                    shouldShowImagePicker.toggle()
-                }
-                .navigationViewStyle(StackNavigationViewStyle())
-                .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil){
-                    ImagePicker(image: $image)
-                        .ignoresSafeArea()
-                }
-                .frame(width: 145,height: 145,alignment: .center)
+                HStack
+                              {
+                                  
+                                  
+                                  
+                                  HStack{
+                                      
+                                      if let image = self.image {
+                                          Image(uiImage: image)
+                                              .resizable()
+                                              .scaledToFill()
+                                              .frame(width: 143,height: 143)
+                                              .cornerRadius(80)
+                                      }else{
+                                          
+                                          AsyncImage(url: URL(string: self.url_image)){
+                                              image in
+                                              image.resizable()
+                                                  .scaledToFill()
+                                                  .frame(width: 143,height: 143)
+                                                  .cornerRadius(80)
+                                          } placeholder: {
+                                              ProgressView()
+                                          }
+                                          
+                                              
+                                      }
+                                      
+                                  }
+                                  .overlay(RoundedRectangle(cornerRadius: 80)
+                                      .stroke(Color("Color1"), lineWidth : 3)
+                                  )
+                                  .onTapGesture {
+                                      shouldShowImagePicker.toggle()
+                                  }
+                                  .navigationViewStyle(StackNavigationViewStyle())
+                                  .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil){
+                                      ImagePicker(image: $image)
+                                          .ignoresSafeArea()
+                                  }
+                                  .frame(width: 145,height: 145,alignment: .center)
+                                  
+                              }.padding(.horizontal, 80)
+                                  
+                              
+                              
                 
                 
                 
                 
                 //personal information
                 Section(header: Text("Personal Information")) {
-                    TextField("FistName", text: $firstName).onAppear{
-                        self.firstName = UserDefaults.standard.string(forKey: "fist") ?? "nil"
+                    HStack{
+                        TextField("FistName", text: $firstName).onAppear{
+                           self.firstName = UserDefaults.standard.string(forKey: "fist") ?? "nil"
+                       }
+                        Spacer()
+
+                        Image(systemName: "person.2.wave.2")
                     }
-                    TextField("NickName", text: $nickName).onAppear{
-                        self.nickName = UserDefaults.standard.string(forKey: "nick") ?? "nil"
-                    }
-                    TextField("Email", text: $email)
-                        .disabled(true)
-                        .onAppear{
-                            self.email = UserDefaults.standard.string(forKey: "email") ?? "nil"
+                    HStack{
+                        TextField("NickName", text: $nickName).onAppear{
+                            self.nickName = UserDefaults.standard.string(forKey: "nick") ?? "nil"
                         }
+                        Spacer()
+
+                        Image(systemName: "person.badge.clock")
+                    }
+                    HStack{
+                        TextField("Email", text: $email)
+                            .disabled(true)
+                            .onAppear{
+                                self.email = UserDefaults.standard.string(forKey: "email") ?? "nil"
+                            }
+                        Spacer()
+
+                        Image(systemName: "mail")
+                    }
+                   
                     
                     //
                     //                    DatePicker("Date naissance" , selection: Date().timeIntervalSinceNow, displayedComponents: .date).onAppear{
@@ -110,12 +141,24 @@ struct profileView1: View {
                 
                 //school information
                 Section(header: Text("More Information")) {
-                    TextField("Address", text: $address).onAppear{
-                        self.address = UserDefaults.standard.string(forKey: "address") ?? "nil"
+                    HStack{
+                        TextField("Address", text: $address).onAppear{
+                            self.address = UserDefaults.standard.string(forKey: "address") ?? "nil"
+                        }
+                        Spacer()
+
+                        Image(systemName: "map.circle.fill")
                     }
-                    TextField("Phone", text: $phone).onAppear{
-                        self.phone = UserDefaults.standard.string(forKey: "phone") ?? "nil"
+                    HStack{
+                        TextField("Phone", text: $phone).onAppear{
+                            self.phone = UserDefaults.standard.string(forKey: "phone") ?? "nil"
+                        }
+                        Spacer()
+
+                        Image(systemName: "phone.and.waveform")
+
                     }
+                   
                 }
                 
                 
@@ -168,7 +211,7 @@ struct profileView1: View {
     }
     
     func updateUser(){
-        viewModel.updateUser(id: _id!, firstName: firstName, email: email, nickName: nickName, address: address, phone: phone){
+        viewModel.updateUser( firstName: firstName, email: email, nickName: nickName, address: address, phone: phone,image: image!){
             (resp) in
             //update shared preferences and binding value
             if(resp == true){
@@ -179,6 +222,7 @@ struct profileView1: View {
                 pref.set(self.nickName, forKey: "nick")
                 pref.set(self.address, forKey: "address")
                 pref.set(self.phone, forKey: "phone")
+
            
             }else{
                 //show alert

@@ -24,7 +24,7 @@ struct list_therapy_Patient: View {
         NavigationView{
             VStack(spacing : 15){
                 HStack {
-                    Text("Browse")
+                    Text("Therapies")
                         .font(.largeTitle.bold())
                         Text ("Recommended")
                         .fontWeight(.semibold)
@@ -37,16 +37,16 @@ struct list_therapy_Patient: View {
                 .padding(.horizontal,15)
                 TagsView()
                 ScrollView(.vertical, showsIndicators: false){
-                    VStack(spacing : 35) {
+                    VStack(spacing : 5) {
                         ForEach(viewModel.therapies, id: \.self){
                             TherapyCardViewPatient($0)
                         }
                     }
                     .padding(.horizontal, 15)
-                    .padding(.vertical, 20)
+                    .padding(.vertical, 10)
                 }
                 .coordinateSpace(name: "SCROLLVIEW")
-                .padding(.top, 15)
+                .padding(.top, 5)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -70,23 +70,23 @@ struct list_therapy_Patient: View {
                         .foregroundColor(.black)
 
                     VStack {
-                               Link(destination: getMapURL(therapy), label: {
-                                   Text("Address: \(therapy.address)")
-                                       .font(.caption)
-                                       .foregroundColor(.gray)
-                               })
-                               .onOpenURL(perform: { _ in
-                                   showMap = true
-                               })
-                               
-                               if showMap {
-                                   MapView(selectedCoordinate: $coordinates)
-                                       .frame(height: 300)
-                               }
-                           }
-                           .onAppear {
-                               getCoordinates(for: therapy.address)
-                           }
+                    Link(destination: getMapURL(therapy), label: {
+                        Text("Address: \(therapy.address)")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    })
+                    .onOpenURL(perform: { _ in
+                        showMap = true
+                    })
+                    
+                    if showMap {
+                        MapView(selectedLocation: $coordinates)
+                            .frame(height: 300)
+                    }
+                }
+                .onAppear {
+                    getCoordinates(for: therapy.address)
+                }
                     Text(therapy.date)
                         .font(.caption)
                         .foregroundColor(.gray)

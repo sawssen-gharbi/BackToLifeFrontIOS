@@ -18,9 +18,10 @@ struct ResetView: View {
                     .aspectRatio(contentMode: .fit)
                     .padding()
                 
-                TextField("Email", text: $email)
-                    .padding(.horizontal)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                CaptionedTextField(caption: "Email Address", text: $email, placeholder: "Enter your email")
+                    .padding([.top], 20)
+
                 
                 
              Button(action: {
@@ -57,7 +58,7 @@ struct ResetView: View {
             .fullScreenCover(isPresented: $isLoading) {
                 ResetPasswordPage()
             }
-        }.navigationBarBackButtonHidden(true)
+        }
     }
     
     private func resetPassword() {

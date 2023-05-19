@@ -12,27 +12,33 @@ struct list_Patient: View {
     var body: some View {
         NavigationView{
             VStack(spacing : 15){
-                HStack {
-                    Text("Browse")
-                        .font(.largeTitle.bold())
-                    Text ("Recommended")
+                HStack (spacing : 150){
+                 
+                    Text ("My patient list")
                         .fontWeight(.semibold)
                         .padding(.leading, 15)
                         .foregroundColor(.gray)
                         .offset(y :2)
+                    NavigationLink(destination: QRScannerPage()) {
+                        Image(systemName: "viewfinder.circle.fill")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .font(.caption)
+                            .foregroundColor(Color("DarkPink"))
+                    }
                     
                 }
                 .frame(maxWidth : .infinity, alignment: .leading)
                 .padding(.horizontal,15)
                 TagsView()
                 ScrollView(.vertical, showsIndicators: false){
-                    VStack(spacing : 35) {
+                    VStack(spacing : 10) {
                         ForEach(viewModel.reservations, id: \._id){
                             TherapyCardViewP($0)
                         }
                     }
                     .padding(.horizontal, 15)
-                    .padding(.vertical, 20)
+                    .padding(.vertical, 5)
                 }
                 .coordinateSpace(name: "SCROLLVIEW")
                 .padding(.top, 15)

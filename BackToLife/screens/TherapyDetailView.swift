@@ -102,7 +102,6 @@ struct DetailsScreen: View {
                }
                .padding() // Add padding to VStack
                .navigationBarTitle("", displayMode: .inline)
-               .navigationBarBackButtonHidden(true)
                // Remove navigation title
            }
        }

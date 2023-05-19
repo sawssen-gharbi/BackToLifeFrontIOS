@@ -24,18 +24,14 @@ struct ResetPasswordPage: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 200)
                     VStack(spacing: 10) {
-                        TextField("Email", text: $email)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.horizontal, 20)
-                        TextField("Reset Code", text: $resetCode)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.horizontal, 20)
-                        SecureField("New Password", text: $password)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.horizontal, 20)
-                        SecureField("Confirm Password", text: $confirmPassword)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.horizontal, 20)
+                      
+                        
+                        CaptionedTextField(caption: "your code", text: $resetCode, placeholder: "Enter your email")
+                            .padding([.top], 20)
+                        ViewableSecureField(caption: "New Password", text: $password, placeholder: "Enter your password")
+                            .padding([.top], 5)
+                        ViewableSecureField(caption: "Password", text: $confirmPassword, placeholder: "Enter your password")
+                            .padding([.top], 5)
                     }
                     if isLoading {
                         ProgressView()
@@ -49,7 +45,7 @@ struct ResetPasswordPage: View {
                                 .cornerRadius(10)
                                 .padding(.horizontal, 20)
                         }
-                        .disabled(email.isEmpty || resetCode.isEmpty || password.isEmpty || confirmPassword.isEmpty)
+                        .disabled( resetCode.isEmpty || password.isEmpty || confirmPassword.isEmpty)
                     }
                     Text(message)
                         .padding(.top, 10)
@@ -75,7 +71,7 @@ struct ResetPasswordPage: View {
     func resetPassword() {
         isLoading = true
         let url = URL(string: "http://localhost:7001/user/edit_password")!
-        let body = [            "email": email,            "resetCode": resetCode,            "password": password        ]
+        let body = [                 "resetCode": resetCode,            "password": password        ]
         var request = URLRequest(url: url)
         request.httpMethod = "PUT"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

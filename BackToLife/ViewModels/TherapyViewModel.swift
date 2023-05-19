@@ -13,7 +13,7 @@ class ViewModel: ObservableObject {
 
     @Published var therapies: [Therapy] = []
     @Published var showAlert = false
-
+    
     
     func fetch() {
            guard let url = URL(string: "http://localhost:7001/therapy") else {

@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 struct ajout_therapy: View {
-   
+    
     
     
     let image  = UIImage (named: "register")
@@ -25,13 +25,15 @@ struct ajout_therapy: View {
     @State private var location: CLLocationCoordinate2D?
     @State private var showMap: Bool = false
     @State private var capacityText: String = ""
+    @State private var selectedLocation: CLLocationCoordinate2D?
+    
     @State private var selectedCoordinate: CLLocationCoordinate2D?
     @State var isAdded = false
     private var formattedDate: String {
-          let dateFormatter = DateFormatter()
-          dateFormatter.dateFormat = "yyyy-MM-dd"
-          return dateFormatter.string(from: date)
-      }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date)
+    }
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         NavigationView{
@@ -40,10 +42,19 @@ struct ajout_therapy: View {
                     
                     VStack {
                         
-                        Text("Add a Group Therapy")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .padding()
+                        HStack{
+                            Text("Add a Group Therapy")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .padding()
+                            NavigationLink(destination: list_therapy()) {
+                                Image(systemName: "homepodmini.2.fill")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                                    .font(.caption)
+                                    .foregroundColor(Color("DarkPink"))
+                            }
+                        }
                         HStack{
                             if let image = self.selectedImage {
                                 Image(uiImage: image)
@@ -59,7 +70,7 @@ struct ajout_therapy: View {
                                     .frame(width: 150)
                                     .clipShape(Circle())
                                     .shadow(radius: 10)
-                                    
+                                
                             }
                             
                         }
@@ -75,49 +86,63 @@ struct ajout_therapy: View {
                                 .ignoresSafeArea()
                         }
                         .frame(width: 145,height: 145,alignment: .center)
-
+                        
                         
                         CaptionedTextField(caption: "The title", text: $titre, placeholder: "Enter The title")
                             .padding([.top], 20)
-                           
+                        
                         CaptionedTextField(caption: "The description ", text: $description, placeholder: "Enter your description")
                             .padding([.top], 20)
-                         
-                        CaptionedTextField(caption: "The address ", text: $address, placeholder: "Enter your address")
-                            .padding([.top], 20)
+                        
+                        VStack {
+                                  MapView(selectedLocation: $selectedLocation, onLocationChanged: { location in
+                                      selectedLocation = location
+                                      reverseGeocode(location: location)
+                                  })
+                                  .frame(height: 200)
+                                  
                            
+
+                                  CaptionedTextField(caption: "The address", text: $address, placeholder: "Enter your address")
+                                      .padding(.top, 20)
+                              }
+                              .onAppear {
+                                  if let selectedLocation = selectedLocation {
+                                      reverseGeocode(location: selectedLocation)
+                                  }
+                              }
                         Spacer()
                         DatePicker("Select a date", selection: $date, displayedComponents: .date)
                             .font(.title3)
                             .padding()
                             .frame(maxWidth: .infinity)
                             .frame(width: 310, height: 50)
-
+                        
                             .background(Color("black").opacity(0.05))
                             .cornerRadius(12)
                             .foregroundColor(Color("black").opacity(0.28))
                         Text("Selected Date: \(formattedDate)")
-                                      .padding()
-                                      .foregroundColor(Color("DarkPink"))
-                     
-                        HStack {
-                                    Stepper("Capacity: \(capacity)", value: $capacity, in: 0...20)
-                                        .padding()
-                                        .frame(width: 250)
-                                        .foregroundColor(Color.gray)
-                                    
-                                    TextField("Capacity", text: $capacityText, onEditingChanged: { isEditing in
-                                        if !isEditing, let value = Int(capacityText) {
-                                            capacity = value
-                                        }
-                                    })
-                                    .padding()
-                                    .frame(width: 100)
-                                    .foregroundColor(Color("DarkPink"))
-                                }
-
+                            .padding()
+                            .foregroundColor(Color("DarkPink"))
                         
-                }}
+                        HStack {
+                            Stepper("Capacity: \(capacity)", value: $capacity, in: 0...20)
+                                .padding()
+                                .frame(width: 250)
+                                .foregroundColor(Color.gray)
+                            
+                            TextField("Capacity", text: $capacityText, onEditingChanged: { isEditing in
+                                if !isEditing, let value = Int(capacityText) {
+                                    capacity = value
+                                }
+                            })
+                            .padding()
+                            .frame(width: 100)
+                            .foregroundColor(Color("DarkPink"))
+                        }
+                        
+                        
+                    }}
                 Button(action: {
                     Task {
                         addTherapy(titre: titre, address: address,description: description, date: date, capacity: capacity, image: selectedImage!) { error in
@@ -127,28 +152,28 @@ struct ajout_therapy: View {
                             } else {
                                 // Success
                                 print("Therapy added successfully!")
-                                isAdded = true 
+                                isAdded = true
                             }
                             
                         }}
                 }) {
                     Text("Add Therapy")
-                
-
-                                            .font(.title3)
-                                            .fontWeight(.bold)
-                                            .foregroundColor( .white)
-                                            .frame(height: 44)
-                                            .padding(.horizontal, 30)
-                                            .background(Color("DarkPink"))
-                                            .cornerRadius(50)
-                                    }
-                                    .background(
-                                        NavigationLink(
-                                            destination: list_therapy(),
-                                            isActive: $isAdded,
-                                            label: { EmptyView() }
-                                        ))
+                    
+                    
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor( .white)
+                        .frame(height: 44)
+                        .padding(.horizontal, 30)
+                        .background(Color("DarkPink"))
+                        .cornerRadius(50)
+                }
+                .background(
+                    NavigationLink(
+                        destination: list_therapy(),
+                        isActive: $isAdded,
+                        label: { EmptyView() }
+                    ))
                 
             }
             
@@ -160,7 +185,53 @@ struct ajout_therapy: View {
         }
     }
     
-}
+     func reverseGeocode(location: CLLocationCoordinate2D) {
+         let geocoder = CLGeocoder()
+         let location = CLLocation(latitude: location.latitude, longitude: location.longitude)
+         
+         geocoder.reverseGeocodeLocation(location) { placemarks, error in
+             if let error = error {
+                 // Handle the error appropriately
+                 print("Reverse geocoding error: \(error.localizedDescription)")
+                 return
+             }
+             
+             guard let placemark = placemarks?.first else {
+                 // No placemarks found
+                 return
+             }
+             
+             // Construct the address string from the placemark's components
+             var addressComponents: [String] = []
+             
+             if let name = placemark.name {
+                 addressComponents.append(name)
+             }
+             
+             if let street = placemark.thoroughfare {
+                 addressComponents.append(street)
+             }
+             
+             if let city = placemark.locality {
+                 addressComponents.append(city)
+             }
+             
+             if let state = placemark.administrativeArea {
+                 addressComponents.append(state)
+             }
+             
+             if let postalCode = placemark.postalCode {
+                 addressComponents.append(postalCode)
+             }
+             
+             if let country = placemark.country {
+                 addressComponents.append(country)
+             }
+             
+             address = addressComponents.joined(separator: ", ")
+         }
+     }
+ }
 struct ImagePicker : UIViewControllerRepresentable{
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
@@ -291,3 +362,93 @@ fileprivate struct TherapyResponse: Codable {
     var id: String
 
 }
+struct MapView: UIViewRepresentable {
+    @Binding var selectedLocation: CLLocationCoordinate2D?
+    var onLocationChanged: ((CLLocationCoordinate2D) -> Void)?
+    @State private var region: MKCoordinateRegion = MKCoordinateRegion()
+    @State private var coordinator: Coordinator? // Updated to @State
+    
+    func makeUIView(context: Context) -> MKMapView {
+        let mapView = MKMapView()
+        mapView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleTap(_:))))
+        
+        let pinchGesture = UIPinchGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handlePinch(_:)))
+        mapView.addGestureRecognizer(pinchGesture)
+        
+        return mapView
+    }
+    
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+        if let selectedLocation = selectedLocation {
+            // Update the map view to show the selected location
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = selectedLocation
+            uiView.addAnnotation(annotation)
+            
+            if region.center.latitude == 0 && region.center.longitude == 0 {
+                region = MKCoordinateRegion(center: selectedLocation, latitudinalMeters: 500, longitudinalMeters: 500)
+                uiView.setRegion(region, animated: true)
+            }
+        }
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        let coordinator = Coordinator(selectedLocation: $selectedLocation, onLocationChanged: onLocationChanged, region: $region)
+        self.coordinator = coordinator
+        return coordinator
+    }
+    
+    class Coordinator: NSObject {
+        @Binding var selectedLocation: CLLocationCoordinate2D?
+        var onLocationChanged: ((CLLocationCoordinate2D) -> Void)?
+        @Binding var region: MKCoordinateRegion
+        
+        init(selectedLocation: Binding<CLLocationCoordinate2D?>, onLocationChanged: ((CLLocationCoordinate2D) -> Void)?, region: Binding<MKCoordinateRegion>) {
+            _selectedLocation = selectedLocation
+            self.onLocationChanged = onLocationChanged
+            _region = region
+        }
+        
+        @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+            let locationInView = gestureRecognizer.location(in: gestureRecognizer.view)
+            let mapView = gestureRecognizer.view as? MKMapView
+            let locationOnMap = mapView?.convert(locationInView, toCoordinateFrom: mapView)
+            selectedLocation = locationOnMap
+            if let location = locationOnMap {
+                onLocationChanged?(location)
+            }
+        }
+        
+        @objc func handlePinch(_ gestureRecognizer: UIPinchGestureRecognizer) {
+            if gestureRecognizer.state == .changed {
+                if gestureRecognizer.scale > 1.0 {
+                    zoomIn()
+                } else {
+                    zoomOut()
+                }
+                
+                gestureRecognizer.scale = 1.0
+            }
+        }
+        
+
+
+
+        
+        func zoomIn() {
+            region.span.latitudeDelta /= 2
+            region.span.longitudeDelta /= 2
+        }
+        
+        func zoomOut() {
+            region.span.latitudeDelta *= 2
+            region.span.longitudeDelta *= 2
+        }
+    }
+}
+
+
+
+
+
+

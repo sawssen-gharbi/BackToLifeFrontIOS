@@ -26,6 +26,8 @@
 		729D91D629F9733C00CBC874 /* ListTherapyPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D91D529F9733C00CBC874 /* ListTherapyPatient.swift */; };
 		729D91D829F974DA00CBC874 /* TherapyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D91D729F974DA00CBC874 /* TherapyDetailView.swift */; };
 		729D91DA29F97F1F00CBC874 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D91D929F97F1F00CBC874 /* Reservation.swift */; };
+		729FBFC32A16F33D00E36814 /* emptyy1.json in Resources */ = {isa = PBXBuildFile; fileRef = 729FBFC22A16F33C00E36814 /* emptyy1.json */; };
+		729FBFC52A16F35600E36814 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 729FBFC42A16F35600E36814 /* background_music.mp3 */; };
 		72A44D0329FE8F70007043CF /* loginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A44D0229FE8F70007043CF /* loginViewModel.swift */; };
 		72A44D0529FE9E09007043CF /* UpdateTherapy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A44D0429FE9E09007043CF /* UpdateTherapy.swift */; };
 		72A44D0729FEE858007043CF /* ReservationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A44D0629FEE858007043CF /* ReservationViewModel.swift */; };
@@ -33,8 +35,12 @@
 		72AB059F2A0173D700879E8D /* AddReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AB059E2A0173D700879E8D /* AddReport.swift */; };
 		72AB05A12A01740200879E8D /* AddMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AB05A02A01740200879E8D /* AddMood.swift */; };
 		72AB05A42A01777300879E8D /* Breathing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AB05A32A01777300879E8D /* Breathing.swift */; };
-		72AB05A62A0179E800879E8D /* emptyy1.json in Resources */ = {isa = PBXBuildFile; fileRef = 72AB05A52A0179E800879E8D /* emptyy1.json */; };
 		72AFFD1E29E60686004023D7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AFFD1D29E60686004023D7 /* HomeView.swift */; };
+		72B96CD92A15713C00ED94A1 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B96CD82A15713C00ED94A1 /* Permission.swift */; };
+		72B96CDB2A15716100ED94A1 /* QrScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B96CDA2A15716100ED94A1 /* QrScannerDelegate.swift */; };
+		72B96CDD2A15719700ED94A1 /* QrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B96CDC2A15719700ED94A1 /* QrView.swift */; };
+		72B96CDF2A1571BC00ED94A1 /* QrScannerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B96CDE2A1571BC00ED94A1 /* QrScannerPage.swift */; };
+		72B96CE12A1571E100ED94A1 /* CameraPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B96CE02A1571E100ED94A1 /* CameraPage.swift */; };
 		72BB08462A012B11008B8B20 /* PatientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB08452A012B11008B8B20 /* PatientProfile.swift */; };
 		72BB08482A012D6D008B8B20 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB08472A012D6D008B8B20 /* ProfileViewModel.swift */; };
 		72BB084A2A0159E8008B8B20 /* MoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB08492A0159E8008B8B20 /* MoodService.swift */; };
@@ -47,7 +53,6 @@
 		72BE92F62A095B0800F88604 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE92F52A095B0800F88604 /* SplashScreenViewController.swift */; };
 		72BE92FC2A095C0B00F88604 /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE92FB2A095C0B00F88604 /* Meditation.swift */; };
 		72BE92FE2A095C4100F88604 /* YTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE92FD2A095C4100F88604 /* YTView.swift */; };
-		72BE93002A095E9800F88604 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72BE92FF2A095E9800F88604 /* background_music.mp3 */; };
 		72C0A04729DE1AD700F89497 /* BackToLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A04629DE1AD700F89497 /* BackToLifeApp.swift */; };
 		72C0A04929DE1AD700F89497 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0A04829DE1AD700F89497 /* ContentView.swift */; };
 		72C0A04B29DE1AD800F89497 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C0A04A29DE1AD800F89497 /* Assets.xcassets */; };
@@ -105,6 +110,8 @@
 		729D91D529F9733C00CBC874 /* ListTherapyPatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTherapyPatient.swift; sourceTree = "<group>"; };
 		729D91D729F974DA00CBC874 /* TherapyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyDetailView.swift; sourceTree = "<group>"; };
 		729D91D929F97F1F00CBC874 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		729FBFC22A16F33C00E36814 /* emptyy1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emptyy1.json; path = ../../attachments/emptyy1.json; sourceTree = "<group>"; };
+		729FBFC42A16F35600E36814 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background_music.mp3; path = ../../../Downloads/background_music.mp3; sourceTree = "<group>"; };
 		72A44D0229FE8F70007043CF /* loginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewModel.swift; sourceTree = "<group>"; };
 		72A44D0429FE9E09007043CF /* UpdateTherapy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTherapy.swift; sourceTree = "<group>"; };
 		72A44D0629FEE858007043CF /* ReservationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewModel.swift; sourceTree = "<group>"; };
@@ -112,8 +119,12 @@
 		72AB059E2A0173D700879E8D /* AddReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReport.swift; sourceTree = "<group>"; };
 		72AB05A02A01740200879E8D /* AddMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMood.swift; sourceTree = "<group>"; };
 		72AB05A32A01777300879E8D /* Breathing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breathing.swift; sourceTree = "<group>"; };
-		72AB05A52A0179E800879E8D /* emptyy1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emptyy1.json; path = ../attachments/emptyy1.json; sourceTree = "<group>"; };
 		72AFFD1D29E60686004023D7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		72B96CD82A15713C00ED94A1 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
+		72B96CDA2A15716100ED94A1 /* QrScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerDelegate.swift; sourceTree = "<group>"; };
+		72B96CDC2A15719700ED94A1 /* QrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrView.swift; sourceTree = "<group>"; };
+		72B96CDE2A1571BC00ED94A1 /* QrScannerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerPage.swift; sourceTree = "<group>"; };
+		72B96CE02A1571E100ED94A1 /* CameraPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPage.swift; sourceTree = "<group>"; };
 		72BB08452A012B11008B8B20 /* PatientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProfile.swift; sourceTree = "<group>"; };
 		72BB08472A012D6D008B8B20 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		72BB08492A0159E8008B8B20 /* MoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodService.swift; sourceTree = "<group>"; };
@@ -124,7 +135,6 @@
 		72BE92F52A095B0800F88604 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		72BE92FB2A095C0B00F88604 /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		72BE92FD2A095C4100F88604 /* YTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTView.swift; sourceTree = "<group>"; };
-		72BE92FF2A095E9800F88604 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background_music.mp3; path = ../../Downloads/background_music.mp3; sourceTree = "<group>"; };
 		72C0A04329DE1AD700F89497 /* BackToLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackToLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C0A04629DE1AD700F89497 /* BackToLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToLifeApp.swift; sourceTree = "<group>"; };
 		72C0A04829DE1AD700F89497 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -234,6 +244,18 @@
 			path = Breathing;
 			sourceTree = "<group>";
 		};
+		72B96CD72A15711B00ED94A1 /* QrCode */ = {
+			isa = PBXGroup;
+			children = (
+				72B96CD82A15713C00ED94A1 /* Permission.swift */,
+				72B96CDA2A15716100ED94A1 /* QrScannerDelegate.swift */,
+				72B96CDC2A15719700ED94A1 /* QrView.swift */,
+				72B96CDE2A1571BC00ED94A1 /* QrScannerPage.swift */,
+				72B96CE02A1571E100ED94A1 /* CameraPage.swift */,
+			);
+			path = QrCode;
+			sourceTree = "<group>";
+		};
 		72BE92F42A095AF800F88604 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,8 +276,8 @@
 		72C0A03A29DE1AD700F89497 = {
 			isa = PBXGroup;
 			children = (
-				72BE92FF2A095E9800F88604 /* background_music.mp3 */,
-				72AB05A52A0179E800879E8D /* emptyy1.json */,
+				729FBFC42A16F35600E36814 /* background_music.mp3 */,
+				729FBFC22A16F33C00E36814 /* emptyy1.json */,
 				72C0A04529DE1AD700F89497 /* BackToLife */,
 				72C0A05B29DE1AD800F89497 /* BackToLifeTests */,
 				72C0A06529DE1AD800F89497 /* BackToLifeUITests */,
@@ -278,6 +300,7 @@
 		72C0A04529DE1AD700F89497 /* BackToLife */ = {
 			isa = PBXGroup;
 			children = (
+				72B96CD72A15711B00ED94A1 /* QrCode */,
 				72440F4F29EA451D00487162 /* Utils */,
 				7293C50329E4CFE40092B3A1 /* services */,
 				72404F6329DE522900245477 /* ViewModels */,
@@ -496,9 +519,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				729FBFC52A16F35600E36814 /* background_music.mp3 in Resources */,
+				729FBFC32A16F33D00E36814 /* emptyy1.json in Resources */,
 				72C0A04E29DE1AD800F89497 /* Preview Assets.xcassets in Resources */,
-				72AB05A62A0179E800879E8D /* emptyy1.json in Resources */,
-				72BE93002A095E9800F88604 /* background_music.mp3 in Resources */,
 				72C0A04B29DE1AD800F89497 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +624,7 @@
 				729D91D629F9733C00CBC874 /* ListTherapyPatient.swift in Sources */,
 				72C0A07B29DE1C4500F89497 /* ListTherapiesView.swift in Sources */,
 				72AB059F2A0173D700879E8D /* AddReport.swift in Sources */,
+				72B96CD92A15713C00ED94A1 /* Permission.swift in Sources */,
 				72BB084A2A0159E8008B8B20 /* MoodService.swift in Sources */,
 				72404F6729DE558700245477 /* patientHomeView.swift in Sources */,
 				72A44D0329FE8F70007043CF /* loginViewModel.swift in Sources */,
@@ -623,9 +647,11 @@
 				72AB05A42A01777300879E8D /* Breathing.swift in Sources */,
 				72C0A07E29DE1D1800F89497 /* Therapy.swift in Sources */,
 				72C0A05329DE1AD800F89497 /* BackToLife.xcdatamodeld in Sources */,
+				72B96CDD2A15719700ED94A1 /* QrView.swift in Sources */,
 				72BE92FC2A095C0B00F88604 /* Meditation.swift in Sources */,
 				72BB08522A015A9D008B8B20 /* FetchReport.swift in Sources */,
 				729D91D829F974DA00CBC874 /* TherapyDetailView.swift in Sources */,
+				72B96CE12A1571E100ED94A1 /* CameraPage.swift in Sources */,
 				729D91D429F9658600CBC874 /* TherapyViewModel.swift in Sources */,
 				729D91DA29F97F1F00CBC874 /* Reservation.swift in Sources */,
 				724E899B29F89E940046F53F /* Map.swift in Sources */,
@@ -634,8 +660,10 @@
 				72AB05A12A01740200879E8D /* AddMood.swift in Sources */,
 				72BE92F62A095B0800F88604 /* SplashScreenViewController.swift in Sources */,
 				72BB084E2A015A18008B8B20 /* BreatheType.swift in Sources */,
+				72B96CDB2A15716100ED94A1 /* QrScannerDelegate.swift in Sources */,
 				72D4981529F7342B002CA55A /* viewableSecure.swift in Sources */,
 				72C0A07729DE1B9700F89497 /* RegisterView.swift in Sources */,
+				72B96CDF2A1571BC00ED94A1 /* QrScannerPage.swift in Sources */,
 				72D4981329F733E0002CA55A /* CaptionedTextField.swift in Sources */,
 				72BB08482A012D6D008B8B20 /* ProfileViewModel.swift in Sources */,
 				72BE92FE2A095C4100F88604 /* YTView.swift in Sources */,
@@ -800,6 +828,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BackToLife/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -829,6 +858,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BackToLife/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

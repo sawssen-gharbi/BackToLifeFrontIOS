@@ -18,27 +18,33 @@ struct list_therapy: View {
     var body: some View {
         NavigationView{
             VStack(spacing : 15){
-                HStack {
-                    Text("Browse")
-                        .font(.largeTitle.bold())
-                    Text ("Recommended")
-                        .fontWeight(.semibold)
-                        .padding(.leading, 15)
-                        .foregroundColor(.gray)
-                        .offset(y :2)
+                HStack (spacing : 100){
+              
                     
+                    Text ("My therapies list")
+                        .fontWeight(.semibold)
+                        .padding(.leading, 120)
+                        .foregroundColor(Color("black"))
+                        .offset(y :2)
+                    NavigationLink(destination: ajout_therapy()) {
+                        Image(systemName: "plus.diamond")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .font(.caption)
+                            .foregroundColor(Color("DarkPink"))
+                    }.navigationBarHidden(true)
                 }
                 .frame(maxWidth : .infinity, alignment: .leading)
-                .padding(.horizontal,15)
+                .padding(.horizontal,3)
                 TagsView()
                 ScrollView(.vertical, showsIndicators: false){
-                    VStack(spacing : 35) {
+                    VStack(spacing : 5) {
                         ForEach(viewModel.therapies, id: \.self){
                             TherapyCardView($0)
                         }
                     }
                     .padding(.horizontal, 15)
-                    .padding(.vertical, 20)
+                    .padding(.vertical, 10)
                 }
                 .coordinateSpace(name: "SCROLLVIEW")
                 .padding(.top, 15)
@@ -48,7 +54,7 @@ struct list_therapy: View {
         .onAppear {
             viewModel.fetch()
             
-        }.navigationBarBackButtonHidden(true)
+        }
     }
        
     @ViewBuilder
@@ -74,7 +80,7 @@ struct list_therapy: View {
                                })
                                
                                if showMap {
-                                   MapView(selectedCoordinate: $coordinates)
+                                   MapView(selectedLocation: $coordinates)
                                        .frame(height: 300)
                                }
                            }
@@ -97,11 +103,7 @@ struct list_therapy: View {
                         
                         Spacer(minLength: 0)
                         
-                        NavigationLink(destination: ajout_therapy()) {
-                            Image(systemName: "plus")
-                                .font(.caption)
-                                .foregroundColor(.gray)
-                        }  .navigationBarBackButtonHidden(true)
+                      
                         NavigationLink(destination: UpdateTherapy( therapySelected: therapy)) {
                             Image(systemName: "pencil")
                                 .font(.caption)

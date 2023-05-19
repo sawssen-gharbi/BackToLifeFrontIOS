@@ -39,9 +39,38 @@ struct register: View {
                         Text("Sign Up")
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                        Image(uiImage: image!)
-                            .resizable()
-                            .frame(width: 200, height: 300)
+                        HStack{
+                            if let image = self.viewModel.image {
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 143,height: 143)
+                                    .cornerRadius(80)
+                            }else{
+                                
+                                Image("register")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 150)
+                                    .clipShape(Circle())
+                                    .shadow(radius: 10)
+                                    
+                            }
+                            
+                        }
+                        .overlay(RoundedRectangle(cornerRadius: 80)
+                            .stroke(Color("DarkPink"), lineWidth : 3)
+                        )
+                        .onTapGesture {
+                            showingImagePicker.toggle()
+                        }
+                        .navigationViewStyle(StackNavigationViewStyle())
+                        .fullScreenCover(isPresented: $showingImagePicker, onDismiss: nil){
+                            ImagePicker(image: $viewModel.image)
+                                .ignoresSafeArea()
+                        }
+                        .frame(width: 145,height: 145,alignment: .center)
+
                         
                         CaptionedTextField(caption: "FirstName", text: $viewModel.firstName, placeholder: "Enter your firstName")
                             .padding([.top], 20)
@@ -139,26 +168,7 @@ struct register_Previews: PreviewProvider {
         register()
     }
 }
-struct SocalLoginButton: View {
-    var image: Image
-    var text: Text
-    
-    var body: some View {
-        HStack {
-            image
-                .padding(.horizontal)
-            Spacer()
-            text
-                .font(.title2)
-            Spacer()
-        }
-        .padding()
-        .frame(maxWidth: .infinity)
-        .background(Color.white)
-        .cornerRadius(50.0)
-        .shadow(color: Color.black.opacity(0.08), radius: 60, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
-    }
-}
+
 
 struct PrimaryButton: View {
     var title: String
